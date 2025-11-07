@@ -16,7 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #ffff;
-  height: 5000px;
+  height: 3000px;
 }
 
 /* navbar */
@@ -32,6 +32,7 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+  background-color: var(--bg);
 }
 
 .navbar .navbar-logo {
