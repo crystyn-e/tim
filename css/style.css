@@ -36,6 +36,8 @@ body {
   right: 0;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar .navbar-logo {
@@ -45,10 +47,9 @@ body {
 }
 
 .navbar .navbar-logo img {
-  height: 3rem; 
-  width: auto;  
+  height: 3rem;
+  width: auto;
 }
-
 
 .navbar .navbar-nav a {
   color: #fff;
@@ -216,7 +217,6 @@ body {
 
 /* menu section */
 
-
 .menu h2,
 .contact h2 {
   margin-bottom: 1rem;
@@ -315,11 +315,10 @@ footer .social {
 }
 
 .social .fa-whatsapp {
-  font-size: 2.5rem; 
+  font-size: 1.7rem;
   position: relative;
   top: -2px; /* Naikkan ikon WA sedikit */
 }
-
 
 footer .social a {
   color: #fff;
@@ -341,7 +340,6 @@ footer .links a {
 }
 footer .credit {
   font-size: 0.8rem;
-
 }
 
 footer .credit a {
