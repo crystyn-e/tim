@@ -12,11 +12,14 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #ffff;
-  height: 3000px;
 }
 
 /* navbar */
@@ -32,19 +35,20 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
-  background-color: var(--bg);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .navbar .navbar-logo {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.navbar .navbar-logo span {
-  color: #ffff;
-  font-style: italic;
+.navbar .navbar-logo img {
+  height: 3rem; 
+  width: auto;  
 }
+
 
 .navbar .navbar-nav a {
   color: #fff;
@@ -165,7 +169,7 @@ body {
 .about,
 .menu,
 .contact {
-  padding: 10rem 7% 1.4rem;
+  padding: 5rem 7% 1.4rem;
 }
 .about h2,
 .menu h2,
@@ -211,6 +215,8 @@ body {
 /* about section */
 
 /* menu section */
+
+
 .menu h2,
 .contact h2 {
   margin-bottom: 1rem;
@@ -259,14 +265,14 @@ body {
 }
 
 .contact .row .map {
-  flex: 1 1 45rem;
+  flex: 1 1 35rem;
   width: 100%;
   object-fit: cover;
 }
 
 .contact .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 3rem;
+  flex: 1 1 35rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -296,8 +302,54 @@ body {
   background-color: var(--primary);
   cursor: pointer;
 }
-/* media queries */
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+.social .fa-whatsapp {
+  font-size: 2.5rem; 
+  position: relative;
+  top: -2px; /* Naikkan ikon WA sedikit */
+}
+
+
+footer .social a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .social a:hover,
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+
+}
+
+footer .credit a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* media queries */
 /* tablet */
 @media (max-width: 758px) {
   html {
