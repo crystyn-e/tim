@@ -100,6 +100,40 @@ body {
   display: none;
 }
 
+/* Navbar search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: white;
+  width: 30rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--bg);
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
 /* Hero section */
 .hero {
   min-height: 100vh;
@@ -395,6 +429,16 @@ footer .credit a {
     -moz-transform: scaleX(0.2);
     -ms-transform: scaleX(0.2);
     -o-transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    height: 120%;
+    right: 2rem;
+  }
+
+  .navbar .search-form input {
+    font-size: 2rem;
   }
   .about .row {
     flex-wrap: wrap;
