@@ -203,11 +203,13 @@ body {
 /* about section */
 .about,
 .menu,
+.products,
 .contact {
   padding: 5rem 7% 1.4rem;
 }
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -216,6 +218,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span {
   color: var(--primary);
 }
@@ -290,6 +293,51 @@ body {
 
 .menu .row .menu-card .menu-card-title {
   margin-top: 1rem auto 0.5rem;
+}
+
+/* Product section */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-cart {
+  text-align: center;
+  border: 1px solid #666;
+  padding : 2rem;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icons a{
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #6666;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icons a:hover{
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.products .product-image img{
+  height: 25rem;
 }
 
 /* contact section */
