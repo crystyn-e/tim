@@ -340,6 +340,32 @@ body {
   height: 25rem;
 }
 
+.products .product-content h3{
+  font-size: 2rem;
+}
+
+.products .product-star {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-star .star-full{
+  fill: var(--primary);
+  
+}
+
+.products .product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.products .product-price span{
+  text-decoration : line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
 /* contact section */
 .contact .row {
   display: flex;
@@ -397,11 +423,14 @@ footer .social {
   padding: 1rem 0;
 }
 
-.social .fa-whatsapp {
-  font-size: 1.7rem;
-  position: relative;
-  top: -2px; /* Naikkan ikon WA sedikit */
+.social .social-icon  {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 
 footer .social a {
   color: #fff;
