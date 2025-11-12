@@ -10,6 +10,7 @@ document.querySelector("#hamburger-menu").onclick = () => {
 //toggle class active untuk search form
 const searchForm = document.querySelector(".search-form");
 const searchBox = document.querySelector("#search-box");
+const shoppingCartButton = document.querySelector("#shopping-cart-button");
 
 document.querySelector("#search-button").onclick = (e) => {
   searchForm.classList.toggle("active");
@@ -22,12 +23,12 @@ document.querySelector("#search-button").onclick = (e) => {
 const shoppingCart = document.querySelector(".shopping-cart");
 document.querySelector("#shopping-cart-button").onclick = (e) => {
   shoppingCart.classList.toggle("active");
+  shoppingCartButton.focus();
   e.preventDefault();
 };
 //klik diluar elemen
 const hamburger = document.querySelector("#hamburger-menu");
 const searchButton = document.querySelector("#search-button");
-const shoppingCartButton = document.querySelector("#shopping-cart-button");
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");

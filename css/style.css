@@ -339,7 +339,7 @@ body {
 /* about section */
 
 /* menu section */
-
+/* 
 .menu h2,
 .contact h2 {
   margin-bottom: 1rem;
@@ -352,10 +352,10 @@ body {
   margin: auto;
   font-weight: 100;
   line-height: 1.6;
-}
+} */
 /* menu section */
 
-.menu .row {
+/* .menu .row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -374,16 +374,13 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
+} */
 
 .menu .row .menu-card .menu-card-title {
   margin-top: 1rem auto 0.5rem;
 }
 
 /* Product section */
-.products h2 {
-  padding-top: 2.5rem;
-}
 
 .products .row {
   display: grid;
