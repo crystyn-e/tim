@@ -336,6 +336,11 @@ body {
   text-align: left;
 }
 
+.about .about-row .about-card .social-icon {
+  color: black;
+  margin: 10px 1rem;
+}
+
 /* about section */
 
 /* menu section */
