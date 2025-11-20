@@ -1,12 +1,12 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("products", () => ({
     items: [
-      { id: 1, name: "Kue Bawang", img: "1.jpeg", price: 5000 },
-      { id: 2, name: "Kacang Kribo", img: "1.jpeg", price: 5000 },
-      { id: 3, name: "Kuping Gajah", img: "1.jpeg", price: 5000 },
-      { id: 4, name: "2 pcs Kue Bawang", img: "1.jpeg", price: 9000 },
-      { id: 5, name: "2 pcs Kacang Kribo", img: "1.jpeg", price: 9000 },
-      { id: 6, name: "2 pcs Kuping Gajah", img: "1.jpeg", price: 9000 },
+      { id: 1, name: "Kacang Kribo", img: "SingleKacangKribo.jpg", price: 6000 },
+      { id: 2, name: "Kuping Gajah", img: "SingleKupingGajah.jpg", price: 5000 },
+      { id: 3, name: "Keripik Kentang", img: "SingleKeripikKentang.jpg", price: 6000 },
+      { id: 4, name: "2 pcs Kacang Kribo", img: "DoubleKacangKribo.jpg", price: 11000 },
+      { id: 5, name: "2 pcs Kuping Gajah", img: "DoubleKupingGajah.jpg", price: 9000 },
+      { id: 6, name: "2 pcs Keripik Kentang", img: "DoubleKeripikKentang.jpg", price: 11000 },
     ],
   }));
 
@@ -127,6 +127,22 @@ const rupiah = (number) => {
   }).format(number);
 };
 
-// nyoba
 
+// modal box
+  // Store untuk Cart (mengelola keranjang belanja)
+  Alpine.store('cart', {
+    items: [],  // Array: daftar item di cart
+    add(item) {
+      // Tambah item ke cart
+      this.items.push(item);
+      console.log('Item added to cart:', item);  // Log untuk debugging
+      // Tambahkan logika lain jika perlu, seperti update UI, localStorage, atau notifikasi
+    },
+    remove(index) {
+      // Hapus item dari cart berdasarkan index
+      this.items.splice(index, 1);
+      console.log('Item removed from cart at index:', index);
+    },
+    // Tambahkan method lain jika perlu, seperti getTotal() atau clear()
+  });
 

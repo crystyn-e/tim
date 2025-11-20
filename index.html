@@ -46,6 +46,7 @@
         <a href="#products">Produk</a>
         <a href="#contact">Contact</a>
         <a href="#about">Tentang Kami</a>
+
       </div>
 
       <div class="navbar-extra">
@@ -175,7 +176,8 @@
   <use href="img/feather-sprite.svg#shopping-cart" />
 </svg>
             </i></a>
-            <a href="# class="item-detail-button"
+            <!-- Tambah @click untuk membuka modal dan set selectedItem -->
+            <!-- <a href="# class="item-detail-button" @click.prevent = "showModal = true; selectedItem = item"
               >
               <i>
               
@@ -190,14 +192,14 @@
 >
   <use href="img/feather-sprite.svg#eye" />
 </svg></i
-            ></a>
+            ></a> -->
           </div>
           <div class="product-image">
             <img :src="`img/${item.img}`" :alt="item.name" />
           </div>
           <div class="product-content">
             <h3 x-text = "item.name"></h3>
-            <div class="product-star">
+            <!-- <div class="product-star">
              <svg
   width="24"
   height="24"
@@ -251,7 +253,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-</svg>
+</svg> -->
             </div>
             <div class="product-price"><span x-text = "rupiah(item.price)"></span></div>
           </div>
@@ -262,7 +264,7 @@
     <!-- produk Section end -->
 
     <!-- contact section start -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <h2><span>Kontak</span> Kami</h2>
       <p>
         Jika kalian memiliki kendala ataupun saran, bisa hubungi kami dengan mengisi form dibawah
@@ -296,8 +298,28 @@
           <button type="submit" class="btn">kirim pesan</button>
         </form>
       </div>
+    </section> -->
+
+    <section class = "contact-container" id = "contact" >
+
+      <form action="https://api.web3forms.com/submit" method="POST" class = "contact-left">
+        <div class="contact-left-title">
+          <h2>Punya Kendala?</h2>
+          <hr>
+        </div>
+        <input type="hidden" name="access_key" value="ac773ca1-6b70-48e9-a34e-420cefd0b27e"  >
+        <input type="text" name = "name" placeholder="Nama Anda" class = "contact-inputs" equired>
+        <input type="email" name = "email" placeholder="Email Anda" class = "contact-inputs" equired>
+        <textarea name="message" placeholder="Your Message" class = "contact-inputs" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+      <div class="contact-right">
+        <img src="img/logo.png" alt="">
+      </div>
     </section>
     <!-- contact section end -->
+
+
 
     <!-- hero section end -->
     <!-- About section -->
@@ -323,7 +345,7 @@
         <div class="about-card">
           <img src="img/Erna.png" alt="Ahmad" />
           <h3 class="about-name">Ernawati Hutasoit</h3>
-          <p class="about-role">Programmer</p>
+          <p class="about-role">Marketing</p>
           <a
             href="https://www.instagram.com/ernaa.wh?igsh=NTJoM3dwcnlkbDd4"
             target="_blank"
@@ -355,7 +377,7 @@
         <div class="about-card">
           <img src="img/marthin.png" alt="Arly" />
           <h3 class="about-name">Marthin Lubis</h3>
-          <p class="about-role">Programmer</p>
+          <p class="about-role">Marketing</p>
           <a
             href="https://www.instagram.com/marthinlubis3?igsh=MXJ0OXdiOHJiZWRzaA=="
             target="_blank"
@@ -388,7 +410,7 @@
       <div class="links">
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
-        <a href="#menu">Menu</a>
+        <a href="#products">Produk</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -429,7 +451,7 @@
     </div> -->
     <!-- Modal box item end -->
 
-    <div class="modal" id="item-detail-modal" 
+    <!-- <div class="modal" id="item-detail-modal" 
      x-data 
      x-show="$store.detailModal.on" 
      x-transition.opacity.duration.300ms
@@ -462,8 +484,31 @@
         </a>
       </div>
     </div>
+    
   </div>
-</div>
+</div> -->
+
+                  <img :src="`img/${$store.modal.item.img}`" :alt="$store.modal.item.name" />
+        <div class="product-content">
+          <!-- <h3 x-text="$store.modal.item.name"></h3>
+          <p x-text="$store.modal.item.description || 'Deskripsi produk tidak tersedia.'"></p>
+          <div class="product-star">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price"><span x-text="rupiah($store.modal.item.price)"></span> <span>IDR 10K</span></div>
+          <a href="#" @click.prevent="$store.cart.add($store.modal.item)">
+            <i data-feather="shopping-cart"></i>
+            <span>add to cart</span>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <!-- feather-icons -->
     <script>
